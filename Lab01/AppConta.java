@@ -7,10 +7,9 @@ public class AppConta {
         Conta cA = new Conta();
         Conta cB = new Conta();
 
-        System.out.println(cA.getNumero());
-        System.out.println(cB.getNumero());
+        System.out.println("Numero da conta cA: " + cA.getNumero());
+        System.out.println("Numero da conta cB: " + cB.getNumero() + "\n");
 
-        System.out.println();
 
         cA.depositar(1000);
         cB.depositar(100);
@@ -19,6 +18,6 @@ public class AppConta {
         cB.sacar(20);
 
         System.out.println("Saldo cA " + cA.getSaldo());
-        System.out.println("Saldo cB " + cA.getSaldo());
+        System.out.println("Saldo cB " + cB.getSaldo());
     }
 }

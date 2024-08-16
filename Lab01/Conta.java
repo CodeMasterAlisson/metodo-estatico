@@ -2,7 +2,7 @@ package Lab01;
 
 public class Conta {
 
-    private static double taxaDeImposto = 1.01; // já calcula tudo
+    private static double taxaDeImposto = 0.01;
     private static int numeroConta = 1000;
     private int numero;
     private double saldo;
@@ -32,8 +32,9 @@ public class Conta {
 
     public void sacar(double valor) {
         double taxa = valor * Conta.taxaDeImposto;
-        if (valor > 0 && this.getSaldo() > (valor * taxa)) {
-            this.setSaldo(this.getSaldo() - (valor*taxa));
+        double valorComImposto = taxa + valor;
+        if (valor > 0 && this.getSaldo() >= valorComImposto) {
+            this.setSaldo(this.getSaldo() - valorComImposto);
         }
     }
 }
