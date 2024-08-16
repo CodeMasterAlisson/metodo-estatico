@@ -8,12 +8,16 @@ public class Conta {
     private double saldo;
 
     public Conta(){
-        this.numero = ++Conta.numeroConta;
-        this.saldo = 0;
+        this.setNumero(++Conta.numeroConta);
+        this.setSaldo(0);
     }
 
     public int getNumero() {
         return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
     public double getSaldo() {
